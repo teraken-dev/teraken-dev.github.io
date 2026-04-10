@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>doneday</title>
+    <style>
+      :root {
+        --bg: #f8f9fe;
+        --card: #ffffff;
+        --text: #1d2040;
+        --muted: #70758f;
+        --primary: #6a5cff;
+        --accent: #ff7f6a;
+        --line: #e4e7fb;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 72%);
+        color: var(--text);
+      }
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 56px 24px 80px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(106, 92, 255, 0.12);
+        color: var(--primary);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        font-size: 12px;
+      }
+      h1 {
+        margin: 18px 0 12px;
+        font-size: clamp(42px, 9vw, 76px);
+        line-height: 0.96;
+      }
+      p.lead {
+        margin: 0;
+        max-width: 720px;
+        color: var(--muted);
+        font-size: 22px;
+        line-height: 1.5;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+        margin-top: 40px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 24px;
+        box-shadow: 0 18px 44px rgba(72, 78, 122, 0.08);
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 22px;
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .links {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 32px;
+      }
+      a.button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 180px;
+        padding: 15px 20px;
+        border-radius: 16px;
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      a.button.secondary {
+        background: white;
+        color: var(--text);
+        border: 1px solid var(--line);
+      }
+      .note {
+        margin-top: 24px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .ja {
+        margin-top: 52px;
+        padding-top: 28px;
+        border-top: 1px solid var(--line);
+      }
+      .ja h2 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+      .ja p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="badge">SMALL WINS EVERY DAY</span>
+      <h1>doneday</h1>
+      <p class="lead">
+        A simple habit tracker that helps you keep goals visible, stack up small wins,
+        and stay consistent one day at a time.
+      </p>
+
+      <div class="grid">
+        <section class="card">
+          <h2>Track progress clearly</h2>
+          <p>See today’s completion rate, streaks, and recent activity at a glance.</p>
+        </section>
+        <section class="card">
+          <h2>Add habits fast</h2>
+          <p>Create a new habit in seconds with a name, icon, and color that fits your routine.</p>
+        </section>
+        <section class="card">
+          <h2>Go ad-free</h2>
+          <p>Remove ads with a one-time purchase if you want a cleaner, more focused experience.</p>
+        </section>
+      </div>
+
+      <div class="links">
+        <a class="button" href="./support.html">Support</a>
+        <a class="button secondary" href="./privacy.html">Privacy Policy</a>
+      </div>
+
+      <p class="note">Contact: terai.kenzi@gmail.com</p>
+
+      <section class="ja">
+        <h2>日本語</h2>
+        <p>
+          doneday は、目標を見える化して、小さな達成を毎日積み上げるためのシンプルな習慣トラッカーです。
+          習慣の追加、今日の記録、継続日数の確認を、軽く分かりやすく続けられます。
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
