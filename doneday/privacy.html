@@ -34,10 +34,15 @@
       }
       h1 { margin: 0 0 12px; font-size: 42px; }
       h2 { margin: 28px 0 10px; font-size: 24px; }
+      h3 { margin: 20px 0 8px; font-size: 18px; }
       p, li { color: var(--muted); line-height: 1.8; }
       a { color: var(--primary); }
+      ul { padding-left: 20px; }
       .back { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-weight: 700; }
       code { background: #f1f3ff; padding: 2px 6px; border-radius: 6px; }
+      table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+      th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; color: var(--muted); }
+      th { background: #f5f6ff; color: var(--text); font-weight: 600; }
     </style>
   </head>
   <body>
@@ -45,60 +50,211 @@
       <a class="back" href="./index.html">← doneday</a>
       <section class="card">
         <h1>Privacy Policy</h1>
-        <p>Last updated: 2026-03-30</p>
+        <p>Last updated: 2026-04-13</p>
 
-        <p><strong>doneday</strong> respects your privacy.</p>
-
-        <h2>Overview</h2>
         <p>
-          doneday is a habit tracking app. The app lets you create habits, mark them as completed,
-          and review streaks and recent progress.
+          This privacy policy describes how <strong>DoneDay Habit Tracker</strong> ("doneday", "the app"),
+          developed by teraken-dev ("we", "us"), collects, uses, and shares information.
+          This policy applies to the app distributed through the Apple App Store and Google Play Store.
         </p>
 
-        <h2>Data Stored In The App</h2>
+        <h2>1. Overview</h2>
         <p>
-          Habit names, icons, colors, completion logs, and streak data are stored locally on your device
-          so the app can function.
+          doneday is a habit tracking app that lets you create habits, mark them as completed,
+          and review streaks and recent progress. The app is designed to work fully offline
+          with no user account required.
         </p>
 
-        <h2>Purchases</h2>
+        <h2>2. Data Stored Locally on Your Device</h2>
         <p>
-          If you choose to remove ads with the app's one-time purchase, purchase processing is handled by
-          Apple App Store or Google Play, and purchase status is managed with RevenueCat.
+          The following data is stored locally on your device using AsyncStorage and is never sent to our servers:
         </p>
-
-        <h2>Advertising</h2>
-        <p>
-          The app may show ads through Google Mobile Ads. Ad-related SDKs may collect device identifiers,
-          diagnostics, and app interaction data as described by their platform policies.
-        </p>
-
-        <h2>Third-Party Services</h2>
         <ul>
-          <li>RevenueCat</li>
-          <li>Google Mobile Ads</li>
+          <li>Habit names, icons, and colors</li>
+          <li>Completion logs and dates</li>
+          <li>Streak and statistics data</li>
+          <li>App preferences and settings</li>
+        </ul>
+        <p>This data stays on your device and is deleted when you uninstall the app.</p>
+
+        <h2>3. Data Collected by Third-Party SDKs</h2>
+        <p>
+          The app integrates third-party SDKs that may automatically collect certain data.
+          We do not control the data collection practices of these SDKs.
+        </p>
+
+        <h3>3.1 Google AdMob (Google Mobile Ads SDK)</h3>
+        <p>The app displays advertisements through Google AdMob. The AdMob SDK may collect:</p>
+        <ul>
+          <li><strong>Device identifiers:</strong> Advertising ID (Android), IDFA (iOS)</li>
+          <li><strong>Device information:</strong> Device model, OS version, screen size, language</li>
+          <li><strong>IP address</strong> (used for approximate location and fraud prevention)</li>
+          <li><strong>App interaction data:</strong> Ad impressions, clicks, and engagement</li>
+          <li><strong>Diagnostic data:</strong> Crash logs, performance metrics</li>
+        </ul>
+        <p>
+          The app requests non-personalized ads only (<code>requestNonPersonalizedAdsOnly: true</code>).
+          However, the AdMob SDK may still collect device identifiers and diagnostic data as described above.
+        </p>
+        <p>
+          For more information, see the
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and
+          <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob & Data</a>.
+        </p>
+
+        <h3>3.2 RevenueCat</h3>
+        <p>The app uses RevenueCat to manage in-app purchases. RevenueCat may collect:</p>
+        <ul>
+          <li><strong>Purchase history:</strong> Transaction data, product identifiers, purchase dates</li>
+          <li><strong>Device identifiers:</strong> Anonymous app user ID, vendor ID</li>
+          <li><strong>App interaction data:</strong> Subscription status, entitlement checks</li>
+        </ul>
+        <p>
+          For more information, see the
+          <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.
+        </p>
+
+        <h2>4. Purpose of Data Collection</h2>
+        <table>
+          <tr>
+            <th>Data Type</th>
+            <th>Purpose</th>
+            <th>Collected By</th>
+          </tr>
+          <tr>
+            <td>Device identifiers</td>
+            <td>Third-party advertising, analytics</td>
+            <td>Google AdMob</td>
+          </tr>
+          <tr>
+            <td>App interaction data</td>
+            <td>Ad delivery, analytics</td>
+            <td>Google AdMob</td>
+          </tr>
+          <tr>
+            <td>Diagnostic data</td>
+            <td>App stability, performance monitoring</td>
+            <td>Google AdMob</td>
+          </tr>
+          <tr>
+            <td>Purchase history</td>
+            <td>App functionality (ad-free entitlement)</td>
+            <td>RevenueCat</td>
+          </tr>
+        </table>
+
+        <h2>5. Data Sharing with Third Parties</h2>
+        <p>
+          We do not sell your personal data. Data collected by third-party SDKs may be shared with
+          their respective services as follows:
+        </p>
+        <ul>
+          <li><strong>Google AdMob</strong> shares ad interaction data with Google's advertising network for ad delivery and measurement.</li>
+          <li><strong>RevenueCat</strong> shares purchase data with Apple App Store / Google Play for transaction validation.</li>
         </ul>
 
-        <h2>Tracking</h2>
-        <p>The app does not currently implement an in-app tracking authorization flow.</p>
-
-        <h2>Notifications</h2>
-        <p>The current version of the app does not actively provide user-facing notification features.</p>
-
-        <h2>Children's Privacy</h2>
-        <p>The app is not directed to children under the age required by your local laws.</p>
-
-        <h2>Contact</h2>
+        <h2>6. In-App Purchases</h2>
         <p>
-          If you have questions about this policy, contact
-          <a href="mailto:terai.kenzi@gmail.com">terai.kenzi@gmail.com</a>.
+          The app offers a one-time purchase to remove advertisements. Purchase processing is handled by
+          the Apple App Store or Google Play Store. Purchase status is managed through RevenueCat.
+          We do not have access to your payment information (credit card number, billing address, etc.).
         </p>
 
-        <h2>日本語</h2>
+        <h2>7. Tracking</h2>
         <p>
-          doneday は、習慣名、アイコン、色、完了ログ、継続日数などのアプリ利用に必要なデータを端末内に保存します。
-          広告非表示の買い切り課金を利用する場合、購入処理は Apple App Store または Google Play により処理され、
-          購入状態の管理には RevenueCat を利用します。広告表示には Google Mobile Ads を利用します。
+          The app does not implement Apple's App Tracking Transparency (ATT) framework and does not
+          track users across other apps or websites. The app requests non-personalized ads only.
+        </p>
+
+        <h2>8. Data Retention and Deletion</h2>
+        <p>
+          All habit data is stored locally on your device. Uninstalling the app permanently deletes all local data.
+          The app does not have user accounts, so no server-side account deletion is required.
+        </p>
+        <p>
+          Data collected by third-party SDKs (Google AdMob, RevenueCat) is retained according to
+          their respective privacy policies and retention schedules.
+        </p>
+
+        <h2>9. User Rights</h2>
+        <h3>For users in the European Union (GDPR)</h3>
+        <p>You have the right to access, correct, delete, and port your personal data, and to object to processing.</p>
+        <h3>For users in California (CCPA)</h3>
+        <p>You have the right to know what data is collected, to request deletion, and to opt out of the sale or sharing of personal information. We do not sell personal information.</p>
+        <p>To exercise any of these rights, contact us at the email address below.</p>
+
+        <h2>10. Children's Privacy</h2>
+        <p>
+          The app is not directed to children under the age of 13 (or the applicable age in your jurisdiction).
+          We do not knowingly collect personal information from children.
+          The app's target audience is ages 18 and above.
+        </p>
+
+        <h2>11. Notifications</h2>
+        <p>The current version of the app does not actively provide push notification features.</p>
+
+        <h2>12. Changes to This Policy</h2>
+        <p>
+          We may update this privacy policy from time to time. Changes will be posted on this page
+          with an updated "Last updated" date. Continued use of the app after changes constitutes
+          acceptance of the revised policy.
+        </p>
+
+        <h2>13. Contact</h2>
+        <p>
+          If you have questions about this privacy policy or your data, contact us at:
+          <br />
+          <a href="mailto:terai.kenzi@gmail.com">terai.kenzi@gmail.com</a>
+        </p>
+
+        <hr style="border: none; border-top: 1px solid var(--line); margin: 32px 0;" />
+
+        <h2>プライバシーポリシー（日本語）</h2>
+        <p>最終更新日: 2026-04-13</p>
+
+        <p>
+          <strong>DoneDay Habit Tracker</strong>（以下「doneday」「本アプリ」）は、teraken-dev（以下「開発者」）が開発した習慣トラッカーアプリです。
+          本アプリは Apple App Store および Google Play Store を通じて配信されます。
+        </p>
+
+        <h3>端末内に保存されるデータ</h3>
+        <p>
+          習慣名、アイコン、色、完了ログ、継続日数などのデータは端末内にのみ保存され、開発者のサーバーには送信されません。
+          アプリをアンインストールすると、これらのデータはすべて削除されます。
+        </p>
+
+        <h3>サードパーティSDKによるデータ収集</h3>
+        <p>本アプリは以下のサードパーティSDKを使用しています。</p>
+        <ul>
+          <li>
+            <strong>Google AdMob（Google Mobile Ads SDK）：</strong>
+            広告表示のために使用します。広告ID、デバイス情報、IPアドレス、アプリ操作データ、診断データが自動的に収集される場合があります。
+            本アプリではパーソナライズされていない広告のみをリクエストしています。
+            詳細は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a> をご確認ください。
+          </li>
+          <li>
+            <strong>RevenueCat：</strong>
+            アプリ内課金（広告非表示の買い切りプラン）の管理に使用します。購入履歴、デバイス識別子、サブスクリプション状態が収集される場合があります。
+            詳細は <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCatプライバシーポリシー</a> をご確認ください。
+          </li>
+        </ul>
+
+        <h3>データの共有</h3>
+        <p>開発者はユーザーの個人データを販売しません。サードパーティSDKが収集したデータは、各サービスのポリシーに基づいて処理されます。</p>
+
+        <h3>データの保持と削除</h3>
+        <p>
+          すべての習慣データは端末内に保存されます。アプリのアンインストールにより完全に削除されます。
+          本アプリにはユーザーアカウント機能がないため、サーバー側でのアカウント削除は不要です。
+        </p>
+
+        <h3>お子様のプライバシー</h3>
+        <p>本アプリは13歳未満のお子様を対象としていません。対象年齢は18歳以上です。</p>
+
+        <h3>お問い合わせ</h3>
+        <p>
+          本プライバシーポリシーに関するご質問は
+          <a href="mailto:terai.kenzi@gmail.com">terai.kenzi@gmail.com</a> までご連絡ください。
         </p>
       </section>
     </main>
