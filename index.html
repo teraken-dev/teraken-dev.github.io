@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>teraken-dev</title>
+    <style>
+      :root {
+        --bg: #f8f9fe;
+        --card: #ffffff;
+        --text: #1d2040;
+        --muted: #70758f;
+        --primary: #6a5cff;
+        --accent: #ff7f6a;
+        --line: #e4e7fb;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 72%);
+        color: var(--text);
+        min-height: 100vh;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 72px 24px 100px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(106, 92, 255, 0.12);
+        color: var(--primary);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 18px 0 12px;
+        font-size: clamp(36px, 7vw, 64px);
+        line-height: 1.0;
+        letter-spacing: -0.02em;
+      }
+      p.lead {
+        margin: 0 0 56px;
+        max-width: 600px;
+        color: var(--muted);
+        font-size: 20px;
+        line-height: 1.6;
+      }
+      .apps {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+      }
+      .app-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 28px;
+        text-decoration: none;
+        color: inherit;
+        transition: box-shadow 0.2s, transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .app-card:hover {
+        box-shadow: 0 8px 32px rgba(106, 92, 255, 0.12);
+        transform: translateY(-2px);
+      }
+      .app-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+      }
+      .app-name {
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0;
+      }
+      .app-desc {
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.5;
+        margin: 0;
+        flex: 1;
+      }
+      .app-tag {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: rgba(106, 92, 255, 0.10);
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 600;
+        align-self: flex-start;
+      }
+      footer {
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+        padding: 32px 24px;
+        border-top: 1px solid var(--line);
+        margin-top: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="badge">teraken-dev</span>
+      <h1>Simple apps<br>for everyday life.</h1>
+      <p class="lead">Building thoughtful mobile experiences for iOS and Android.</p>
+
+      <div class="apps">
+        <a class="app-card" href="/doneday/">
+          <div class="app-icon">✅</div>
+          <p class="app-name">doneday</p>
+          <p class="app-desc">Habit tracker that helps you build streaks and stay consistent every day.</p>
+          <span class="app-tag">iOS</span>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2026 teraken-dev &mdash; <a href="mailto:teraken.support@gmail.com" style="color:var(--muted)">teraken.support@gmail.com</a>
+    </footer>
+  </body>
+</html>
