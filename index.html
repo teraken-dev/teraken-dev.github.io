@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>teraken-dev</title>
+    <title>TERAKEN — Mobile App Developer</title>
     <style>
       :root {
         --bg: #f8f9fe;
@@ -22,10 +22,34 @@
         color: var(--text);
         min-height: 100vh;
       }
+      header {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 24px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--primary);
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+        margin-left: 24px;
+      }
+      nav a:hover { color: var(--text); }
       main {
         max-width: 960px;
         margin: 0 auto;
         padding: 72px 24px 100px;
+      }
+      .hero {
+        margin-bottom: 80px;
       }
       .badge {
         display: inline-block;
@@ -37,24 +61,32 @@
         letter-spacing: 0.08em;
         font-size: 12px;
         text-transform: uppercase;
+        margin-bottom: 18px;
       }
       h1 {
-        margin: 18px 0 12px;
+        margin: 0 0 16px;
         font-size: clamp(36px, 7vw, 64px);
         line-height: 1.0;
         letter-spacing: -0.02em;
       }
       p.lead {
-        margin: 0 0 56px;
-        max-width: 600px;
+        margin: 0;
+        max-width: 560px;
         color: var(--muted);
         font-size: 20px;
         line-height: 1.6;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0 0 24px;
+        letter-spacing: -0.01em;
       }
       .apps {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 24px;
+        margin-bottom: 80px;
       }
       .app-card {
         background: var(--card);
@@ -94,6 +126,11 @@
         margin: 0;
         flex: 1;
       }
+      .app-tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
       .app-tag {
         display: inline-block;
         padding: 4px 10px;
@@ -102,36 +139,88 @@
         color: var(--primary);
         font-size: 12px;
         font-weight: 600;
-        align-self: flex-start;
       }
+      .about {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 40px;
+        margin-bottom: 80px;
+      }
+      .about p {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+        margin: 0;
+      }
+      .contact {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .contact a {
+        display: inline-block;
+        padding: 14px 32px;
+        border-radius: 999px;
+        background: var(--primary);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 15px;
+        transition: opacity 0.2s;
+      }
+      .contact a:hover { opacity: 0.85; }
       footer {
         text-align: center;
         color: var(--muted);
         font-size: 13px;
         padding: 32px 24px;
         border-top: 1px solid var(--line);
-        margin-top: 80px;
       }
+      footer a { color: var(--muted); text-decoration: none; }
     </style>
   </head>
   <body>
-    <main>
-      <span class="badge">teraken-dev</span>
-      <h1>Simple apps<br>for everyday life.</h1>
-      <p class="lead">Building thoughtful mobile experiences for iOS and Android.</p>
+    <header>
+      <span class="logo">TERAKEN</span>
+      <nav>
+        <a href="#apps">Apps</a>
+        <a href="#about">About</a>
+        <a href="mailto:teraken.support@gmail.com">Contact</a>
+      </nav>
+    </header>
 
+    <main>
+      <div class="hero">
+        <span class="badge">Mobile App Developer</span>
+        <h1>Simple apps<br>for everyday life.</h1>
+        <p class="lead">Building thoughtful mobile experiences for iOS and Android.</p>
+      </div>
+
+      <h2 id="apps">Apps</h2>
       <div class="apps">
         <a class="app-card" href="/doneday/">
           <div class="app-icon">✅</div>
           <p class="app-name">doneday</p>
           <p class="app-desc">Habit tracker that helps you build streaks and stay consistent every day.</p>
-          <span class="app-tag">iOS</span>
+          <div class="app-tags">
+            <span class="app-tag">iOS</span>
+            <span class="app-tag">Android</span>
+          </div>
         </a>
+      </div>
+
+      <div class="about" id="about">
+        <h2 style="margin-top:0">About</h2>
+        <p>TERAKEN is an independent mobile app developer based in Japan, focused on creating simple and useful tools for daily life. We build apps for iOS and Android with a focus on clean design and ease of use.</p>
+      </div>
+
+      <div class="contact">
+        <a href="mailto:teraken.support@gmail.com">Get in touch</a>
       </div>
     </main>
 
     <footer>
-      &copy; 2026 teraken-dev &mdash; <a href="mailto:teraken.support@gmail.com" style="color:var(--muted)">teraken.support@gmail.com</a>
+      &copy; 2026 TERAKEN &mdash; <a href="mailto:teraken.support@gmail.com">teraken.support@gmail.com</a>
     </footer>
   </body>
 </html>
