@@ -132,37 +132,18 @@
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
-      }
-      .app-tag {
-        display: inline-block;
-        padding: 4px 10px;
-        border-radius: 999px;
-        background: rgba(106, 92, 255, 0.10);
-        color: var(--primary);
-        font-size: 12px;
-        font-weight: 600;
-      }
-      .store-links {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        margin-top: 4px;
-      }
-      .store-link {
-        display: inline-flex;
         align-items: center;
-        gap: 5px;
-        padding: 6px 12px;
-        border-radius: 8px;
-        background: var(--text);
-        color: #fff;
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: 600;
+      }
+      .store-badge {
+        display: inline-block;
         transition: opacity 0.2s;
       }
-      .store-link:hover { opacity: 0.8; }
-      .store-link.android { background: #01875f; }
+      .store-badge:hover { opacity: 0.8; }
+      .store-badge img {
+        height: 36px;
+        width: auto;
+        display: block;
+      }
       .about {
         background: var(--card);
         border: 1px solid var(--line);
@@ -242,8 +223,12 @@
           <p class="app-name">doneday</p>
           <p class="app-desc">Habit tracker that helps you build streaks and stay consistent every day.</p>
           <div class="app-tags">
-            <a class="app-tag" href="https://apps.apple.com/app/id6761164684" target="_blank" rel="noopener" style="text-decoration:none">iOS</a>
-            <a class="app-tag" href="https://play.google.com/store/apps/details?id=com.terakendev.doneday" target="_blank" rel="noopener" style="text-decoration:none">Android</a>
+            <a class="store-badge" href="https://apps.apple.com/app/id6761164684" target="_blank" rel="noopener">
+              <img src="/appstore-badge.svg" alt="Download on the App Store" />
+            </a>
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.terakendev.doneday" target="_blank" rel="noopener">
+              <img src="/googleplay-badge.png" alt="Get it on Google Play" />
+            </a>
           </div>
         </a>
       </div>
