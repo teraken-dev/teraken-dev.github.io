@@ -140,6 +140,27 @@
         font-size: 12px;
         font-weight: 600;
       }
+      .store-links {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 4px;
+      }
+      .store-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 6px 12px;
+        border-radius: 8px;
+        background: var(--text);
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        transition: opacity 0.2s;
+      }
+      .store-link:hover { opacity: 0.8; }
+      .store-link.android { background: #01875f; }
       .about {
         background: var(--card);
         border: 1px solid var(--line);
@@ -221,6 +242,10 @@
           <div class="app-tags">
             <span class="app-tag">iOS</span>
             <span class="app-tag">Android</span>
+          </div>
+          <div class="store-links">
+            <a class="store-link" href="https://apps.apple.com/app/id6761164684" target="_blank" rel="noopener">🍎 App Store</a>
+            <a class="store-link android" href="https://play.google.com/store/apps/details?id=com.terakendev.doneday" target="_blank" rel="noopener">▶ Google Play</a>
           </div>
         </a>
       </div>
