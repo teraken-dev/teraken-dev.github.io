@@ -140,9 +140,13 @@
       }
       .store-badge:hover { opacity: 0.8; }
       .store-badge img {
-        height: 36px;
+        height: 32px;
         width: auto;
         display: block;
+      }
+      .store-badge img[alt="Get it on Google Play"] {
+        height: 47px;
+        margin: -7px 0;
       }
       .about {
         background: var(--card);
@@ -218,7 +222,7 @@
 
       <h2 id="apps">Apps</h2>
       <div class="apps">
-        <a class="app-card" href="/doneday/">
+        <div class="app-card">
           <div class="app-icon"><img src="/doneday/icon.png" alt="doneday icon" /></div>
           <p class="app-name">doneday</p>
           <p class="app-desc">Habit tracker that helps you build streaks and stay consistent every day.</p>
@@ -230,7 +234,7 @@
               <img src="/googleplay-badge.png" alt="Get it on Google Play" />
             </a>
           </div>
-        </a>
+        </div>
       </div>
 
       <div class="about" id="about">
