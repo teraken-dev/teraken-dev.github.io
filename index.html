@@ -108,11 +108,13 @@
         width: 64px;
         height: 64px;
         border-radius: 16px;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 32px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .app-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
       .app-name {
         font-size: 22px;
@@ -236,7 +238,7 @@
       <h2 id="apps">Apps</h2>
       <div class="apps">
         <a class="app-card" href="/doneday/">
-          <div class="app-icon">✅</div>
+          <div class="app-icon"><img src="/doneday/icon.png" alt="doneday icon" /></div>
           <p class="app-name">doneday</p>
           <p class="app-desc">Habit tracker that helps you build streaks and stay consistent every day.</p>
           <div class="app-tags">
